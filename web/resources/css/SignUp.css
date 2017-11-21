@@ -1,0 +1,11 @@
+.signup .login-box
+{
+    height: auto;
+    margin-top: 130px;
+   
+}
+.icon-plus
+{
+    background-position: -54px -36px;
+    background-image: url(https://d2rhekw5qr4gcj.cloudfront.net/img/sprites/icons-grey-dark.v4.png);
+}
