@@ -22,7 +22,7 @@ public class UserController {
 public String login (ModelMap mm)
 {
     mm.put("abc", "toi là thuan");
-    return "login";
+    return "course";
 }
 
 
