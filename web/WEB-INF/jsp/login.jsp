@@ -23,12 +23,12 @@
         <meta property="og:site_name" content="Memrise" />
         <link rel="image_src" href="https://d2rhekw5qr4gcj.cloudfront.net/img/logo/facebook-new.png">
         <link href="https://plus.google.com/113645013176360560927/" rel="publisher" />
-        <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://d2rhekw5qr4gcj.cloudfront.net/dist/css/ie-e11bcdd712.css"/><![endif]-->
-        <link rel="stylesheet" type="text/css" href="https://d2rhekw5qr4gcj.cloudfront.net/dist/css/extern/bootstrap-three-28e0790512.css" />
-        <link rel="stylesheet" type="text/css" href="https://d2rhekw5qr4gcj.cloudfront.net/dist/css/web-a6f26e9d12.css" />
-        <link rel="stylesheet" type="text/css" href="https://d2rhekw5qr4gcj.cloudfront.net/dist/css/icons-8f2cb75e12.css" />
-        <link rel="stylesheet" type="text/css" href="https://d2rhekw5qr4gcj.cloudfront.net/accounts/dist/css/auth-75049db912.css">
-        <link rel="canonical" href="https://www.memrise.com/login/"></head>
+        <link href="../resources/css/bootstrap-three-28e0790512.css" rel="stylesheet" type="text/css"/> 
+        <link href="../resources/css/web-a6f26e9d12.css" rel="stylesheet" type="text/css"/> 
+        <link href="../resources/css/icons-8f2cb75e12.css" rel="stylesheet" type="text/css"/>
+        <link href="../resources/css/auth-75049db912.css" rel="stylesheet" type="text/css"/> 
+        <!--<link rel="canonical" href="https://www.memrise.com/login/">-->
+    </head>
 
     <body class="memrise reverse-header-ruled plain">
         <div id="fb-root" class=" fb_reset">
@@ -43,8 +43,8 @@
         </div>
 
         <jsp:include page="header.jsp" /> 
-        
-        
+
+
         <div id="content" class="">
             <div class="container container-main">
                 <div class="front"></div>

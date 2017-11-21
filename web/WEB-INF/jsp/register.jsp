@@ -19,10 +19,10 @@
     <link rel="image_src" href="https://d2rhekw5qr4gcj.cloudfront.net/img/logo/facebook-new.png">
     <link href="https://plus.google.com/113645013176360560927/" rel="publisher" />
     <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://d2rhekw5qr4gcj.cloudfront.net/dist/css/ie-e11bcdd712.css"/><![endif]-->
-    <link rel="stylesheet" type="text/css" href="https://d2rhekw5qr4gcj.cloudfront.net/dist/css/extern/bootstrap-three-28e0790512.css" />
-    <link rel="stylesheet" type="text/css" href="https://d2rhekw5qr4gcj.cloudfront.net/dist/css/web-a6f26e9d12.css" />
-    <link rel="stylesheet" type="text/css" href="https://d2rhekw5qr4gcj.cloudfront.net/dist/css/icons-8f2cb75e12.css" />
-    <link rel="stylesheet" type="text/css" href="https://d2rhekw5qr4gcj.cloudfront.net/accounts/dist/css/auth-75049db912.css">
+    <link href="../resources/css/bootstrap-three-28e0790512.css" rel="stylesheet" type="text/css"/> 
+    <link href="../resources/css/web-a6f26e9d12.css" rel="stylesheet" type="text/css"/> 
+    <link href="../resources/css/icons-8f2cb75e12.css" rel="stylesheet" type="text/css"/>
+    <link href="../resources/css/auth-75049db912.css" rel="stylesheet" type="text/css"/>
     <link rel="canonical" href="https://www.memrise.com/login/"></head>
 
 <body class="memrise reverse-header-ruled plain">
@@ -110,8 +110,8 @@
     </div>
     <jsp:include page="footer.jsp" /> 
     <script src="../resources/js/libs-b89f04a312.js" type="text/javascript"></script>
-    <script src="../resources/js/memrise-bundle-61a0720e12.js" type="text/javascript"></script>
-    <script src="../resources/js/templates-19b8ca7512.js" type="text/javascript"></script>
+    <script src="../resources/js/memrise-bundle-61a0720e12.js" type="text/javascript"></script> 
     <script src="../resources/js/main-f2efb8ef12.js" type="text/javascript"></script> 
+    <script src="../resources/js/templates-19b8ca7512.js" type="text/javascript"></script>
 </body> 
 </html> 
