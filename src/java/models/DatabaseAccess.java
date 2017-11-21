@@ -76,12 +76,25 @@ public class DatabaseAccess {
     public static boolean register(String name,String email, String password)
     {
         try {
+            
+            String existedEmail = null;
+            PreparedStatement stmt1 = con.prepareStatement("SELECT *FROM elearning.user where email =?");
+            stmt1.setString(1,email);
+            ResultSet result = stmt1.executeQuery();
+            while (result.next())
+            {
+                existedEmail = result.getString("email");
+            }
+            if (existedEmail ==null)
+            {
+            
             PreparedStatement stmt = con.prepareStatement("INSERT INTO elearning.user(name,email,password) VALUES (?,?,?)");
             stmt.setString(1, name);
             stmt.setString(2,email);
             stmt.setString(3, password);
             stmt.executeUpdate();
             return true;
+            }
         } catch (SQLException ex) {
             Logger.getLogger(DatabaseAccess.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -49,9 +49,23 @@ public class UserController {
         }
     }
 
-    @RequestMapping(value = "/userregister", method = RequestMethod.POST)
+    @RequestMapping(value = "/userRegister", method = RequestMethod.POST)
 
-    public String userRegister(ModelMap mm) {
+    public String userRegister(@RequestParam(value = "email", required = true) String email,
+            @RequestParam(value = "password", required =true) String password,
+            @RequestParam(value = "name", required =true) String name,
+            ModelMap mm) {
+        
+        boolean result =  DatabaseAccess.newInstance().register(name,email,password);
+        if (result==true)
+        {
+            mm.put("notify","Register success");
+        }
+        else 
+        {
+            mm.put("notify", "This email is already exist");
+        }
+        
 
         System.out.println("register");
         return "register";

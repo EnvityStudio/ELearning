@@ -61,13 +61,14 @@
                                 <i class="ico ico-plus"></i>
                                 Sign up
                             </h2> 
-                            <form action="/join/" method="POST" id="join" class="form-full-width">
+                            <label  style="color: red">${notify}</label>
+                            <form action="userRegister" method="POST"  class="form-full-width">
 
                                 <input type="hidden" name="csrfmiddlewaretoken" value="e0afSAfzmyVoab0kusu2NmGVCwI1axf28CURHlnNztZXnQVsi4N9lSjwW44YGgp8">
 
                                 <div class="field ">
                                     <label for="username">Username:</label>
-                                    <input class="inpt-large" id="username" name="username" type="text">
+                                    <input class="inpt-large" id="username" name="name" type="text">
                                 </div>
 
                                 <div class="field ">
@@ -81,7 +82,7 @@
                                     <label for="password1">
                                         Password: 
                                     </label>
-                                    <input class="inpt-large" id="password1" name="password1" type="password">
+                                    <input class="inpt-large" id="password1" name="password" type="password">
 
 
                                 </div>
