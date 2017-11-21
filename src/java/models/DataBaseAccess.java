@@ -5,9 +5,9 @@
  */
 package models;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -59,6 +59,7 @@ public class DataBaseAccess {
 
     public static List<Course> getCourses() {
         List<Course> courses = new ArrayList<>();
+        connectDB();
         try {
             Statement stmt = con.createStatement();
 
@@ -71,7 +72,7 @@ public class DataBaseAccess {
                 int subcribers = result.getInt("subcribers");
 
                 String image = result.getString("image");
-
+                
                 Course course = new Course(id, name, description, subcribers, image);
                 courses.add(course);
             }
@@ -82,53 +83,8 @@ public class DataBaseAccess {
         return courses;
     }
 
-    public static User login(String email, String password) {
-        User user = null;
-        try {
-            PreparedStatement stmt = con.prepareStatement("SELECT *FROM elearning.user where email=? and password = ? ");
-            stmt.setString(1, email);
-            stmt.setString(2, password);
+    public static void main(String[] args) {
+        List<Course> list = DataBaseAccess.newInstance().getCourses();
 
-            ResultSet result = stmt.executeQuery();
-            while (result.next()) {
-                int iduser = result.getInt("iduser");
-                String name = result.getString("name");
-                String avatar = result.getString("avatar");
-                String phone = result.getString("phone");
-                String address = result.getString("address");
-                user = new User(iduser, name, email, password, avatar, phone, address);
-                return user;
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(DataBaseAccess.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        return user;
-    }
-
-    public static boolean register(String name, String email, String password) {
-        try {
-
-            String existedEmail = null;
-            PreparedStatement stmt1 = con.prepareStatement("SELECT *FROM elearning.user where email =?");
-            stmt1.setString(1, email);
-            ResultSet result = stmt1.executeQuery();
-            while (result.next()) {
-                existedEmail = result.getString("email");
-            }
-            if (existedEmail == null) {
-
-                PreparedStatement stmt = con.prepareStatement("INSERT INTO elearning.user(name,email,password) VALUES (?,?,?)");
-                stmt.setString(1, name);
-                stmt.setString(2, email);
-                stmt.setString(3, password);
-                stmt.executeUpdate();
-                return true;
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(DataBaseAccess.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        return false;
     }
 }
