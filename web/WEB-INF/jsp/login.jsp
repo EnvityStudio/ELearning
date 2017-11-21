@@ -56,14 +56,16 @@
                                     <i class="ico ico-user"></i>
                                     Login
                                 </h2>
-                                <form action="Login" id="login" method="post" class="form-full-width">
+                                
+                                <form action="userLogin.html"method="post" class="form-full-width">
                                     <div id="no-cookies" class="alert alert-danger hide">
                                         Cookies are not enabled on your browser. Please enable them in your browser's security preferences to login.
                                     </div>
                                     <input type="hidden" name="csrfmiddlewaretoken" value="VW3zjh78TE5FJJlgJdA8LYy9aBo5twZ9PyNb82fm6z9eWogoxPTfjubKu9K2Zf9f">
+                                    <label style="color: red">${invalid}</label>
                                     <div class="field ">
                                         <label for="id_username">Username or Email:</label>
-                                        <input class="inpt-large" name="username" type="text" tabindex="1"> 
+                                        <input class="inpt-large" type="text"required="true"name="email"  tabindex="1"> 
                                     </div> 
                                     <div class="field ">
                                         <!--                                        <p class="pull-right">
@@ -72,11 +74,12 @@
                                         <label for="id_password">
                                             Password:
                                         </label>
-                                        <input class="inpt-large" name="password" type="password" tabindex="2"> 
+                                        <input class="inpt-large"type="password"required="true"  name="password"  tabindex="2"> 
                                     </div> 
                                     <input type="hidden" name="next" value=""> 
                                     <br> 
-                                    <input type="submit" class="btn-success btn-large" value="Login" tabindex="3">
+                                    <button type="submit" class="btn-success btn-large">Login</button>
+<!--                                    <input type="submit" class="btn-success btn-large" value="Login" tabindex="3">-->
                                 </form> 
                             </div>
                         </div>
