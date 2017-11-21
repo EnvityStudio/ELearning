@@ -18,14 +18,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value = "/user")
 public class UserController {
 
-@RequestMapping (value = "/login", method = RequestMethod.GET)
-public String login (ModelMap mm)
-{
-    mm.put("abc", "toi là thuan");
-    return "course";
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login(ModelMap mm) {
+        mm.put("abc", "toi là thuan");
+        return "login";
+    }
+
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
+
+    public String register(ModelMap mm) {
+
+        System.out.println("register");
+        return "register";
+    }
+
 }
-
-
-
-}
-

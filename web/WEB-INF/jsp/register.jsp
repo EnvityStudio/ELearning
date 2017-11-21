@@ -1,121 +1,117 @@
-<%-- 
-    Document   : register
-    Created on : Nov 21, 2017, 4:53:17 PM
-    Author     : thuan
---%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%> 
+<!doctype html>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    <title>Memrise - Login</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/png" href="https://d2rhekw5qr4gcj.cloudfront.net/img/new_icon_32x32.png" />
+    <link rel="shortcut icon" href="https://d2rhekw5qr4gcj.cloudfront.net/img/new_favicon.ico" />
+    <link rel="apple-touch-icon" sizes="72x72"/>
+    <!--href="https://d2rhekw5qr4gcj.cloudfront.net/img/logo/logo-new@2x.png" />-->
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="en">
+    <link rel="apple-touch-icon" sizes="114x114"/>
+    <!--href="https://d2rhekw5qr4gcj.cloudfront.net/img/logo/logo-new@3x.png" />-->
+    <meta property="fb:app_id" content="143688012353890" />
+    <meta property="fb:page_id" content="149149908445051" />
+    <meta property="og:site_name" content="Memrise" />
+    <link rel="image_src" href="https://d2rhekw5qr4gcj.cloudfront.net/img/logo/facebook-new.png">
+    <link href="https://plus.google.com/113645013176360560927/" rel="publisher" />
+    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://d2rhekw5qr4gcj.cloudfront.net/dist/css/ie-e11bcdd712.css"/><![endif]-->
+    <link rel="stylesheet" type="text/css" href="https://d2rhekw5qr4gcj.cloudfront.net/dist/css/extern/bootstrap-three-28e0790512.css" />
+    <link rel="stylesheet" type="text/css" href="https://d2rhekw5qr4gcj.cloudfront.net/dist/css/web-a6f26e9d12.css" />
+    <link rel="stylesheet" type="text/css" href="https://d2rhekw5qr4gcj.cloudfront.net/dist/css/icons-8f2cb75e12.css" />
+    <link rel="stylesheet" type="text/css" href="https://d2rhekw5qr4gcj.cloudfront.net/accounts/dist/css/auth-75049db912.css">
+    <link rel="canonical" href="https://www.memrise.com/login/"></head>
 
-<head>
-    <title>ELearning-SignUp</title>
-    <link rel="stylesheet" type="text/css" href="../resources/css/signup.css">
-    <link rel="stylesheet" type="text/css" href="../resources/css/common.css">
-    <link rel="stylesheet" type="text/css" href="../resources/css/Login.css">
-    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<body class="memrise reverse-header-ruled plain">
+    <div id="fb-root" class=" fb_reset">
+        <div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div>
+        <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+            <div>
+                <iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://staticxx.facebook.com/connect/xd_arbiter/r/lY4eZXm_YWu.js?version=42#channel=f2189a8a6de2b&amp;origin=https%3A%2F%2Fwww.memrise.com" style="border: none;">
 
-</head>
+                </iframe>
+            </div>
+        </div>
+    </div>
 
-<body class="memrise">
-    <div class="app">
-        <div class="header">
-            <div class="header-row">
-                <div style="display: flex; flex-direction: row; height: 100%;">
-                    <div style="display: flex; flex: 1; align-items: center">
-                        <div class="header-logo-wrapper">
-                            <a href="" bv> <span class="text-style-1">EL</span>earning </a>
-                        </div>
-                    </div>
-                    <div style="display: flex; flex: 1;">
-                        <div style="display: flex; flex: 1;align-items: center;justify-content: center; height: 100%">
-                            <span class="nav-item">
-                                              Khóa học
-                                          </span>
-                        </div>
-                        <div style="display: flex; flex: 1;align-items: center;justify-content: center; height: 100%">
-                            <span class="nav-item nav-item-active">
-                                               Đăng nhập
-                                            </span>
-                        </div>
-                        <div style="display: flex; flex: 1;align-items: center;justify-content: center; height: 100%">
-                            <span class="nav-item nav-item-register">
-                                               Đăng kí
-                                            </span>
-                        </div>
-                        <div style="display: flex; flex: 0.5;align-items: center;justify-content: center; height: 100%">
-                            <img class="avata" src="https://cdn1.iconfinder.com/data/icons/rounded-flat-country-flag-collection-1/2000/vn-01.png" alt="">
-                            <img class="drop-down-arrow" src="http://www.iconsdb.com/icons/preview/white/arrow-217-xxl.png"></img>
+    <jsp:include page="header.jsp" /> 
+    <div class="header-fake"></div> 
+    <div id="optional-banner">
+
+    </div>
+    <div id="page-head" class="page-head ">
+        <div class="inner container clearfix">
+
+        </div>
+    </div> 
+    <div id="content" class="">
+        <div class="container container-main">
+
+
+            <div class="front"></div>
+
+            <div class="row">
+                <div class="col-md-12 one-col">
+                    <div class="front-box">
+                        <div class="whitebox spaced"> 
+                            <h2>
+                                <i class="ico ico-plus"></i>
+                                Sign up
+                            </h2> 
+                            <form action="/join/" method="POST" id="join" class="form-full-width">
+
+                                <input type="hidden" name="csrfmiddlewaretoken" value="e0afSAfzmyVoab0kusu2NmGVCwI1axf28CURHlnNztZXnQVsi4N9lSjwW44YGgp8">
+
+                                <div class="field ">
+                                    <label for="username">Username:</label>
+                                    <input class="inpt-large" id="username" name="username" type="text">
+                                </div>
+
+                                <div class="field ">
+                                    <label for="email">Email address:</label>
+                                    <input class="inpt-large" id="email" name="email" type="email">
+
+
+                                </div>
+
+                                <div class="field ">
+                                    <label for="password1">
+                                        Password: 
+                                    </label>
+                                    <input class="inpt-large" id="password1" name="password1" type="password">
+
+
+                                </div>
+
+                                <div class="field"> 
+                                    <label class="id_accept_ts_and_cs" for="id_accept_ts_and_cs">
+                                        <input type="checkbox" name="accept_ts_and_cs" required="" id="id_accept_ts_and_cs">
+
+                                        I agree to the 
+                                        <a href="/terms/" target="_blank">
+                                            terms of use</a> 
+                                    </label>
+                                </div>
+
+                                <div class="hide">
+                                    <input type="text" name="key" value="">
+                                </div> 
+                                <input type="hidden" value="" name="next">
+                                <input type="submit" class="btn-success btn-large" value="Sign up"> 
+                            </form> 
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="header-fake"></div>
-        <div class="login signup">
-                <div class="login-box">
-                        <h2>
-                            
-                            <i class="ico icon-plus"></i> SignUp
-                        </h2>
-                        <form action="Login" method="post" class="form-full-width">
-                            <a href="" class="btn btn-connect btn-gplus">
-                                <span class="icon-wrap">
-                                    <img src="https://d2rhekw5qr4gcj.cloudfront.net/img/icons/btn_google_dark_normal_ios.svg" class ="google-svg" alt="">
-                                </span>
-                                Login with google
-                            </a>
-                            <div class="space"></div>
-                            <a href="" class="btn btn-flacebook btn-connect btn-large">
-                                <span class="icon-wrap">
-                                    <span class="ico ico-facebook ico-white ico-m"></span>
-                                </span>
-                                Login with facebook
-                            </a>
-                            <div class="interruption row-fluid">
-                                <div class="span5">
-                                    <hr class="dashed">
-                                </div>
-                                <div class="span2">or</div>
-                                <div class="span5">
-                                    <hr class="dashed">
-                                </div>
-                              
-                            </div>
-                            <div class="field">
-                                <label for=""> UserName: </label>
-                                <input class="inpt-large" name="username" type="text" tabindex="1">
-                            </div>
-                            <div class="field">
-                                    <label for=""> Email: </label>
-                                    <input class="inpt-large" name="username" type="email" tabindex="2">
-                                </div>
-                            <div class="field">
-                            <label for="password1">Password:</label>
-                              <input class="inpt-large" name="password1" type="password" tabindex="3">
-                            </div>
-                            <div class="field">
-                            <label class="id_accept_ts_and_cs">
-                                <input type="checkbox" name="id_accept_ts_and_cs" required>
-                                Toi dong y
-                                <a href="" target="_blank"> Dieu khoan su dung</a>
-                            </label>
-                            </div>
-                          
-                            <input type="hidden" name="next" value>
-                            <input type="submit" class="btn-success btn-large" value="Dang Ky" tabindex="4">
-                        </form>
-                    </div>
-        
-        <div class="footer">
+            </div> 
         </div>
     </div>
-</body>
-
-</html>
+    <jsp:include page="footer.jsp" /> 
+    <script src="../resources/js/libs-b89f04a312.js" type="text/javascript"></script>
+    <script src="../resources/js/memrise-bundle-61a0720e12.js" type="text/javascript"></script>
+    <script src="../resources/js/templates-19b8ca7512.js" type="text/javascript"></script>
+    <script src="../resources/js/main-f2efb8ef12.js" type="text/javascript"></script> 
+</body> 
+</html> 
