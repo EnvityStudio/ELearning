@@ -6,7 +6,8 @@
 package controller;
 
 import javax.servlet.http.HttpSession;
-import models.DataBaseAccess;
+
+import models.DatabaseAccess;
 import models.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -38,7 +39,7 @@ public class UserController {
     public String userLogin(@RequestParam(value = "email", required = true) String email,
             @RequestParam(value = "password", required = true) String password, HttpSession session, ModelMap mm) {
 
-        User user = DataBaseAccess.newInstance().login(email, password);
+        User user = DatabaseAccess.newInstance().login(email, password);
 
         if (user != null) {
             session.setAttribute(SESSION_USER, user);
@@ -56,7 +57,7 @@ public class UserController {
             @RequestParam(value = "name", required = true) String name,
             ModelMap mm) {
 
-        boolean result = DataBaseAccess.newInstance().register(name, email, password);
+        boolean result = DatabaseAccess.newInstance().register(name, email, password);
         if (result == true) {
             mm.put("notify", "Register success");
         } else {

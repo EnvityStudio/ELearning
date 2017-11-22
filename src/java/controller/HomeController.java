@@ -6,10 +6,8 @@
 package controller;
 
 import java.util.List;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import models.Course;
-import models.DataBaseAccess;
+import models.DatabaseAccess;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +24,7 @@ public class HomeController {
     @RequestMapping(value = "/course", method = RequestMethod.GET)
     public String index(ModelMap mm) {
 
-        List<Course> course = DataBaseAccess.newInstance().getCourses();
+        List<Course> course = DatabaseAccess.newInstance().getCourses();
         if (course != null) {
             mm.addAttribute("course_all_list", course);
         }
