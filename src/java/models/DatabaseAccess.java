@@ -20,22 +20,22 @@ import java.util.logging.Logger;
  *
  * @author Hoarom
  */
-public class DataBaseAccess {
+public class DatabaseAccess {
 
-    private static DataBaseAccess dataBaseAccess;
+    private static DatabaseAccess databaseAccess;
     private static Connection con;
     private static final String user = "root";
-    private static final String password = "123456";
+    private static final String password = "thuanenvity";
     private static final String url = "jdbc:mysql://localhost:3306/elearning";
 
-    public static DataBaseAccess newInstance() {
-        if (dataBaseAccess == null) {
-            dataBaseAccess = new DataBaseAccess();
+    public static DatabaseAccess newInstance() {
+        if (databaseAccess == null) {
+            databaseAccess = new DatabaseAccess();
         }
         if (con == null) {
             connectDB();
         }
-        return dataBaseAccess;
+        return databaseAccess;
     }
 
     public static void connectDB() {
@@ -44,13 +44,13 @@ public class DataBaseAccess {
                 Class.forName("com.mysql.jdbc.Driver");
                 con = DriverManager.getConnection(url, user, password);
             } catch (ClassNotFoundException ex) {
-                Logger.getLogger(DataBaseAccess.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(DatabaseAccess.class.getName()).log(Level.SEVERE, null, ex);
             } catch (SQLException ex) {
-                Logger.getLogger(DataBaseAccess.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(DatabaseAccess.class.getName()).log(Level.SEVERE, null, ex);
             } catch (Exception e) {
-                Logger.getLogger(DataBaseAccess.class.getName()).log(Level.SEVERE, null, e);
+                Logger.getLogger(DatabaseAccess.class.getName()).log(Level.SEVERE, null, e);
             } finally {
-                Logger.getLogger(DataBaseAccess.class.getName()).log(Level.SEVERE, null, "");
+                Logger.getLogger(DatabaseAccess.class.getName()).log(Level.SEVERE, null, "");
             }
         } else {
             System.out.println("not null");
@@ -100,7 +100,7 @@ public class DataBaseAccess {
                 return user;
             }
         } catch (SQLException ex) {
-            Logger.getLogger(DataBaseAccess.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatabaseAccess.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return user;
@@ -126,7 +126,7 @@ public class DataBaseAccess {
                 return true;
             }
         } catch (SQLException ex) {
-            Logger.getLogger(DataBaseAccess.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatabaseAccess.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return false;
