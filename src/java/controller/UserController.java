@@ -42,7 +42,7 @@ public class UserController {
 
         if (user != null) {
             session.setAttribute(SESSION_USER, user);
-            return "redirect:/home/course";
+            return "redirect:/home/home";
         } else {
             mm.put("invalid", "Email or Password is incorrect");
             return "login";

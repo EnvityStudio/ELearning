@@ -64,7 +64,7 @@
                                     <input type="hidden" name="csrfmiddlewaretoken" value="VW3zjh78TE5FJJlgJdA8LYy9aBo5twZ9PyNb82fm6z9eWogoxPTfjubKu9K2Zf9f">
                                     <label style="color: red">${invalid}</label>
                                     <div class="field ">
-                                        <label for="id_username">Username or Email:</label>
+                                        <label for="id_username">Email:</label>
                                         <input class="inpt-large" type="text"required="true"name="email"  tabindex="1"> 
                                     </div> 
                                     <div class="field ">

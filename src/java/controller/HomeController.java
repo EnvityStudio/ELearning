@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping(value = "/home")
 public class HomeController {
- 
+
     @RequestMapping(value = "/course", method = RequestMethod.GET)
     public String index(ModelMap mm) {
 
@@ -34,4 +34,9 @@ public class HomeController {
         return "course";
     }
 
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public String home(ModelMap mm) {
+
+        return "home";
+    }
 }

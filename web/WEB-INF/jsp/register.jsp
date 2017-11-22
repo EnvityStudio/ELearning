@@ -1,7 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%> 
 <!doctype html>
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
-    <title>Memrise - Login</title>
+    <title>Memrise - Register</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,7 +67,7 @@
                                 <input type="hidden" name="csrfmiddlewaretoken" value="e0afSAfzmyVoab0kusu2NmGVCwI1axf28CURHlnNztZXnQVsi4N9lSjwW44YGgp8">
 
                                 <div class="field ">
-                                    <label for="username">Username:</label>
+                                    <label for="username">Name:</label>
                                     <input class="inpt-large" id="username" name="name" type="text">
                                 </div>
 
