@@ -15,5 +15,6 @@ public class Constant {
     public static String USER_MYQSL = "root";
     public static String PASSWORD_MYSQL = "1234";
     public static String DATABASE_DRIVE = "com.mysql.jdbc.Driver";
-
+    
+    public static final String SESSION_USER = "SessionUser";
 }

@@ -15,6 +15,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import util.Constant;
 
 /**
  *
@@ -24,7 +25,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping(value = "/user")
 public class UserController {
 
-    public static final String SESSION_USER = "SessionUser";
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(ModelMap mm) {
@@ -43,7 +43,7 @@ public class UserController {
         User user = UserDao.newInstance().login(email, password);
 
         if (user != null) {
-            session.setAttribute(SESSION_USER, user);
+            session.setAttribute(Constant.SESSION_USER, user);
             return "redirect:/home/home";
         } else {
             mm.put("invalid", "Email or Password is incorrect");
