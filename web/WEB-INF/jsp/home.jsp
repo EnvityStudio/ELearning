@@ -1,93 +1,362 @@
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%> 
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
-    <title>Dashboard - Memrise</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta property="fb:app_id" content="143688012353890" />
-    <meta property="fb:page_id" content="149149908445051" />
-    <meta name="theme-color" content="#28A0ED" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta property="og:site_name" content="Memrise" />
-    <link href="https://plus.google.com/113645013176360560927/" rel="publisher" />
-    <link rel="canonical" href="https://www.memrise.com/home/">
-    <link href="https://plus.google.com/113645013176360560927/" rel="publisher" />
-    <link rel="icon" type="image/png" href="https://d2rhekw5qr4gcj.cloudfront.net/img/new_icon_32x32.png" />
-    <link rel="shortcut icon" href="https://d2rhekw5qr4gcj.cloudfront.net/img/new_favicon.ico" />
-    <link rel="apple-touch-icon" sizes="72x72" href="https://d2rhekw5qr4gcj.cloudfront.net/img/logo/logo-new@2x.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="https://d2rhekw5qr4gcj.cloudfront.net/img/logo/logo-new@3x.png" />
-    <link rel="image_src" href="https://d2rhekw5qr4gcj.cloudfront.net/img/logo/facebook-new.png"> 
-    <link href="../resources/css/web-a6f26e9d12.css" rel="stylesheet" type="text/css"/>
-    <link href="../resources/css/icons-8f2cb75e12.css" rel="stylesheet" type="text/css"/>
-    <link href="../resources/css/bootstrap-f6bbaf3d12.css" rel="stylesheet" type="text/css"/>
-    <link href="../resources/css/dashboard-27c4a3bd12.css" rel="stylesheet" type="text/css"/> 
-</head>
-
-<body class=" dashboard " >
-
-    <jsp:include page="header1.jsp" /> 
-
-    <div id="content" class="">
-        <div class="container container-main">
-
-
-            <div class="tabbed-sidebar">
-
-                <div class="sidebar-box sidebar-profile">
-                    <div class="profile-header">
-                        <h3 class="name">Hoa_Dinhh</h3>
-                        <p class="rank">level 10</p>
-                        <div class="image-wrapper">
-                            <img class="profile-image" src="https://d2rhekw5qr4gcj.cloudfront.net/img/100sqf/from/uploads/profiles/Hoa_Dinhh_171014_0919_51.jpg" alt="">
-                            <img class="rank-icon" src='https://d2rhekw5qr4gcj.cloudfront.net/img/icons/ranks/ziggy_10.svg' alt="">
-                        </div>
-                    </div>
-                    <div class="profile-content">
-
-                        <div class="content-stats">
-                            <div class="left">
-                                <p class="placeholder js-placeholder"></p>
-                                <p class="number js-num">177</p>
-                                <p class="text">words learned</p>
-                            </div>
-                            <div class="center"></div>
-                            <div class="right">
-                                <p class="placeholder js-placeholder"></p>
-                                <p class="number js-num">139,700</p>
-                                <p class="text">points</P>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Elearning - Home</title>
+        <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+        <link href="<c:url value="/resources/css/common.css" />" rel="stylesheet">
+        <link href="<c:url value="/resources/css/header.css" />" rel="stylesheet">
+        <link href="<c:url value="/resources/css/footer.css" />" rel="stylesheet">
+        <link href="<c:url value="/resources/css/index.css" />" rel="stylesheet">
+        <!--        <link rel="stylesheet" href="../extends/bootstrap/css/bootstrap.min.css">
+                <link rel="stylesheet" href="../styles/common.css">
+                <link rel="stylesheet" href="../styles/header.css"/>
+                <link rel="stylesheet" href="../styles/footer.css">
+                <link rel="stylesheet" href="../styles/index.css">-->
+    </head>
+    <body>
+        <jsp:include page="header1.jsp" /> 
+        <!--body-->
+        <div class="container-wrapper content">
+            <div class="content-wrapper">
+                <div class="left-area">
+                    <div class="box-card card-profile">
+                        <div class="profile-header">
+                            <h3 class="name">Daizee</h3>
+                            <p class="rank">level 4</p>
+                            <div class="image-wrapper">
+                                <img src="https://d2rhekw5qr4gcj.cloudfront.net/img/100sqf/from/uploads/profiles/auTrie2_151014_1020_46.jpg">
+                                <img class="rank-icon" src="https://d2rhekw5qr4gcj.cloudfront.net/img/icons/ranks/ziggy_4.svg">
                             </div>
                         </div>
-                        <div class="sidebar-main-btn profile-link">
-                            <a href="/user/Hoa_Dinhh/" class="simple">View profile</a>
+                        <div class="profile-content">
+                            <div class="content-stats">
+                                <div class="left">
+                                    <p class="number js-num">10</p>
+                                    <div class="text">words learned</div>
+                                </div>
+                                <div class="center"></div>
+                                <div class="right">
+                                    <p class="number js-num">10</p>
+                                    <div class="text">points</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar-main-btn">
+                            <a href="#" class="simple">View profile</a>
                         </div>
                     </div>
                 </div>
+                <div class="right-area">
+                    <div id="213" class="course-card-container">
+                        <div class="course-progress-box">
+                            <div class="card-top">
+                                <div class="card-image-col">
+                                    <a href="#">
+                                        <div class="img-crop">
 
+                                            <img class="course-photo"
+                                                 src="https://d2rhekw5qr4gcj.cloudfront.net/img/400sqf/from/uploads/course_photos/2224242000150817093111.png">
+                                            <img class="category-photo"
+                                                 src="https://d2rhekw5qr4gcj.cloudfront.net/uploads/category_photos/en.png">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card-main-container">
+                                    <div class="detail">
+                                        <p class="title" title="400 Words of TOEFL - Intermediate English">
+                                            <a href="#">400 Words of TOEFL - Intermediate English</a>
+                                        </p>
+                                    </div>
+                                    <div class="pull-right">
+                                        <span class="ctrl-btn">
+                                            <span class="icon"></span>
+                                            <ul class="tooltip">
+                                                <li>
+                                                    <a href="course.html" class="option-btn">
+                                                        <i class="option-pin"></i>
+                                                        Course details
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="course.html" class="option-btn">
+                                                        <i class="option-delete"></i>
+                                                        Quit course
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </span>
+                                    </div>
+                                    <div class="wrapper">
+                                        <div class="course-progress">
+                                            <div class="right">
+                                                <span>5 / 398 words learned</span>
+                                            </div>
+                                            <div class="progress-bar-container">
+                                                <div class="progress-bar" style="width: 1%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-bottom">
+                                <div class="course-actions">
+                                    <a href="#" data-toggle="tooltip"  data-placement="bottom" data-original-title="Learn new words" class="button green">
+                                        <span>Learn</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="12" class="course-card-container">
+                        <div class="course-progress-box">
+                            <div class="card-top">
+                                <div class="card-image-col">
+                                    <a href="#">
+                                        <div class="img-crop">
 
+                                            <img class="course-photo"
+                                                 src="https://d2rhekw5qr4gcj.cloudfront.net/img/400sqf/from/uploads/course_photos/2224242000150817093111.png">
+                                            <img class="category-photo"
+                                                 src="https://d2rhekw5qr4gcj.cloudfront.net/uploads/category_photos/en.png">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card-main-container">
+                                    <div class="detail">
+                                        <p class="title" title="400 Words of TOEFL - Intermediate English">
+                                            <a href="#">400 Words of TOEFL - Intermediate English</a>
+                                        </p>
+                                    </div>
+                                    <div class="pull-right">
+                                        <span class="ctrl-btn">
+                                            <span class="icon"></span>
+                                            <ul class="tooltip">
+                                                <li>
+                                                    <a href="course.html" class="option-btn">
+                                                        <i class="option-pin"></i>
+                                                        Course details
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="course.html" class="option-btn">
+                                                        <i class="option-delete"></i>
+                                                        Quit course
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </span>
+                                    </div>
+                                    <div class="wrapper">
+                                        <div class="course-progress">
+                                            <div class="right">
+                                                <span>5 / 398 words learned</span>
+                                            </div>
+                                            <div class="progress-bar-container">
+                                                <div class="progress-bar" style="width: 1%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-bottom">
+                                <div class="course-actions">
+                                    <a href="#" data-toggle="tooltip"  data-placement="bottom" data-original-title="Learn new words" class="button green">
+                                        <span>Learn</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="32" class="course-card-container">
+                        <div class="course-progress-box">
+                            <div class="card-top">
+                                <div class="card-image-col">
+                                    <a href="#">
+                                        <div class="img-crop">
 
-                <div id="m-sidebar-goal-countdown"></div>
-
-
-
-                <div id="m-sidebar-premium"></div>
-
-
-
-                <div id="m-sidebar-leaderboard"></div>
-
+                                            <img class="course-photo"
+                                                 src="https://d2rhekw5qr4gcj.cloudfront.net/img/400sqf/from/uploads/course_photos/2224242000150817093111.png">
+                                            <img class="category-photo"
+                                                 src="https://d2rhekw5qr4gcj.cloudfront.net/uploads/category_photos/en.png">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card-main-container">
+                                    <div class="detail">
+                                        <p class="title" title="400 Words of TOEFL - Intermediate English">
+                                            <a href="#">400 Words of TOEFL - Intermediate English</a>
+                                        </p>
+                                    </div>
+                                    <div class="pull-right">
+                                        <span class="ctrl-btn">
+                                            <span class="icon"></span>
+                                            <ul class="tooltip">
+                                                <li>
+                                                    <a href="course.html" class="option-btn">
+                                                        <i class="option-pin"></i>
+                                                        Course details
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="course.html" class="option-btn">
+                                                        <i class="option-delete"></i>
+                                                        Quit course
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </span>
+                                    </div>
+                                    <div class="wrapper">
+                                        <div class="course-progress">
+                                            <div class="right">
+                                                <span>5 / 398 words learned</span>
+                                            </div>
+                                            <div class="progress-bar-container">
+                                                <div class="progress-bar" style="width: 1%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-bottom">
+                                <div class="course-actions">
+                                    <a href="#" data-toggle="tooltip"  data-placement="bottom" data-original-title="Learn new words" class="button green">
+                                        <span>Learn</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="tabbed-main page">
-                
-            </div>
-
         </div>
-    </div>
 
-    <jsp:include page="footer.jsp" /> 
-    <script src="../resources/js/libs-b89f04a312.js" type="text/javascript"></script> 
-    <script src="../resources/js/templates-19b8ca7512.js" type="text/javascript"></script> 
-    <script src="../resources/js/memrise-bundle-61a0720e12.js" type="text/javascript"></script>
-    <script src="../resources/js/dashboard-3d9c92fc12.js" type="text/javascript"></script> 
-</body>
+        <!--footer-->
+        <!--<div class="footer">-->
+        <!--<div class="container-wrapper footer-row">-->
+        <!--<div class="row">-->
+        <!--<div class="col-lg-3 col-sm-12 text-center">-->
+        <!--<div class="logo-footer">-->
+        <!--<a href="">-->
+        <!--<img src="../images/memrise-logo-footer.png" class="img-fluid">-->
+        <!--</a>-->
+        <!--</div>-->
+
+        <!--<div class="social-btn">-->
+        <!--<a href="" class="facebook-btn">-->
+        <!--<img src="../images/facebook-icon.png" class="rounded">-->
+        <!--</a>-->
+        <!--<a href="" class="twitter-btn">-->
+        <!--<img src="../images/twitter-icon.png" class="rounded">-->
+        <!--</a>-->
+        <!--<a href="" class="instagram-btn">-->
+        <!--<img src="../images/instagram-icon.png" class="rounded">-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-lg-3 col-sm-12">-->
+        <!--<h4>MEMRISE</h4>-->
+        <!--<ul class="list-item">-->
+        <!--<li>-->
+        <!--<a href="">Giới thiệu</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a href="">Khoa học</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a href="">Liên hệ</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a href="">Đội ngũ</a>-->
+        <!--</li>-->
+
+        <!--<li>-->
+        <!--<a href="">Cơ hội việc làm</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a href="">Press</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a href="">Điều khoản sử dụng</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a href="">Chính sách bảo mật</a>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="col-lg-3 col-sm-12">-->
+        <!--<h4>MORE</h4>-->
+        <!--<ul class="list-item">-->
+        <!--<li>-->
+        <!--<a href="">Blog</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a href="">Diễn đàn</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a href="">Giáo viên</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a href="">Membus</a>-->
+        <!--</li>-->
+        <!--</ul>-->
+
+        <!--<h4 style="margin-top: 10px;">MORE</h4>-->
+        <!--<ul class="list-item">-->
+        <!--<li>-->
+        <!--<a href="">Câu hỏi thường gặp & Trợ giúp</a>-->
+        <!--</li>-->
+        <!--</ul>-->
+
+
+        <!--</div>-->
+        <!--<div class="col-lg-3 col-sm-12">-->
+        <!--<h4>MORE</h4>-->
+        <!--<ul class="list-item">-->
+        <!--<li>-->
+        <!--<a href="">Ngoại ngữ</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a href="">Nghệ thuật & Văn học</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a href="">Toán học & Khóa học</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a href="">Thế giới Tự nhiên</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a href="">Lịch sử & Địa lý</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a href="">Chuyên môn & Nghề nghiệp</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a href="">Giải trí</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a href="">Khoa học thường thức</a>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!--</div>-->
+        <!--</div>-->
+        <script src="<c:url value="/resources/js/jquery-3.2.1.slim.min.js" />"></script>
+        <script src="<c:url value="/resources/js/popper.min.js" />"></script>
+        <script src="<c:url value="/resources/js/tether.min.js" />"></script>
+        <script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
+        <script src="<c:url value="/resources/js/skip-vocabulary.js" />"></script>
+        <!--        <script src="../extends/jquery/jquery-3.2.1.slim.min.js"></script>
+                <script src="../extends/jquery/popper.min.js"></script>
+                <script src="../extends/tether/tether.min.js"></script>
+                <script src="../extends/bootstrap/js/bootstrap.min.js"></script>-->
+
+        <!--        <script src="../js/skip-vocabulary.js"></script>-->
+    </body>
 </html>

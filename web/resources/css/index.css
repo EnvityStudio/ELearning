@@ -14,6 +14,10 @@ body {
     min-width: 400px;
 }
 
+.content-wrapper {
+	margin-top: 80px;
+}
+
 .left-area {
     float: left;
 }

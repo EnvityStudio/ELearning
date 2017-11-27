@@ -33,7 +33,7 @@ public class HomeController {
         return "course";
     }
 
-    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public String home(ModelMap mm) {
 
         return "home";

@@ -3,8 +3,9 @@
     Created on : Nov 21, 2017, 11:03:59 AM
     Author     : thuan
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -30,6 +31,7 @@
         <link href="../resources/css/web-a6f26e9d12.css" rel="stylesheet" type="text/css"/> 
         <link href="../resources/css/icons-8f2cb75e12.css" rel="stylesheet" type="text/css"/>
         <link href="../resources/css/auth-75049db912.css" rel="stylesheet" type="text/css"/> 
+        <link href="<c:url value="/resources/css/header.css" />" rel="stylesheet">
     </head>
     <body>
         <div id="header" class="header-v2">
