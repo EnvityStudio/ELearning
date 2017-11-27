@@ -1,4 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <div class=" fixed-top header">
     <div class="container-wrapper navbar navbar-toggleable-md navbar-inverse no-padding-left no-padding-right">
         <a href="" class="logo navbar-brand">
@@ -31,7 +33,9 @@
                 </li>
             </ul>
             <div class="avatar">
-                <img src="../Elearning/resources/images/avatar.jpg" class="avatar-img rounded-circle img-responsive">
+                 <!--<link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">-->
+                 <img src="<c:url value="/resources/images/avatar.png"  />"  class="avatar-img rounded-circle img-responsive">
+                <!--<img src="/Elearning/resources/images/avatar.jpg" class="avatar-img rounded-circle img-responsive">-->
                 <span class="toggle-icon"></span>
             </div>
 

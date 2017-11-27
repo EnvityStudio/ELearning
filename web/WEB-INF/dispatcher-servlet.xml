@@ -28,6 +28,8 @@
         </property>
     </bean>
     <mvc:resources mapping="/resources/**" location="/resources/" />
+    <!--<mvc:resources mapping="/fonts/**" location="/resources/fonts/"/>--> 
+    <mvc:resources mapping="/images/**" location="/resources/images/"/> 
     <context:annotation-config/>
     <context:component-scan base-package="controller"/>
     <mvc:annotation-driven />
