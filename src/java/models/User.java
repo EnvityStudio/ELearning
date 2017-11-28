@@ -12,7 +12,7 @@ package models;
 public class User {
     
     public User(){}
-     private int idUser;
+    private int id;
     private String name;
     private String email;
     private String password;
@@ -21,7 +21,7 @@ public class User {
     private String address;
 
     public User(int idUser, String name, String email, String password, String avatar, String phone, String address) {
-        this.idUser = idUser;
+        this.id = idUser;
         this.name = name;
         this.email = email;
         this.password = password;
@@ -30,13 +30,14 @@ public class User {
         this.address = address;
     }
 
-    public int getIdUser() {
-        return idUser;
+    public int getId() {
+        return id;
     }
 
-    public void setIdUser(int idUser) {
-        this.idUser = idUser;
+    public void setId(int id) {
+        this.id = id;
     }
+
 
     public String getName() {
         return name;

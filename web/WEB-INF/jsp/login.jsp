@@ -1,5 +1,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%> 
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!doctype html>
 
 <!--[if IE 9]>    <html class="lt-ie10" lang="en"> <![endif]-->
@@ -23,10 +25,11 @@
         <meta property="og:site_name" content="Memrise" />
         <link rel="image_src" href="https://d2rhekw5qr4gcj.cloudfront.net/img/logo/facebook-new.png">
         <link href="https://plus.google.com/113645013176360560927/" rel="publisher" />
-        <link href="../resources/css/bootstrap-three-28e0790512.css" rel="stylesheet" type="text/css"/> 
-        <link href="../resources/css/web-a6f26e9d12.css" rel="stylesheet" type="text/css"/> 
-        <link href="../resources/css/icons-8f2cb75e12.css" rel="stylesheet" type="text/css"/>
-        <link href="../resources/css/auth-75049db912.css" rel="stylesheet" type="text/css"/> 
+        <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+        <link href="<c:url value="/resources/css/common.css" />" rel="stylesheet">
+        <link href="<c:url value="/resources/css/header.css" />" rel="stylesheet">
+        <link href="<c:url value="/resources/css/footer.css" />" rel="stylesheet">
+        <link href="<c:url value="/resources/css/index.css" />" rel="stylesheet">
         <!--<link rel="canonical" href="https://www.memrise.com/login/">-->
     </head>
 
@@ -56,7 +59,7 @@
                                     <i class="ico ico-user"></i>
                                     Login
                                 </h2>
-                                
+
                                 <form action="userLogin.html"method="post" class="form-full-width">
                                     <div id="no-cookies" class="alert alert-danger hide">
                                         Cookies are not enabled on your browser. Please enable them in your browser's security preferences to login.
@@ -79,7 +82,7 @@
                                     <input type="hidden" name="next" value=""> 
                                     <br> 
                                     <button type="submit" class="btn-success btn-large">Login</button>
-<!--                                    <input type="submit" class="btn-success btn-large" value="Login" tabindex="3">-->
+                                    <!--                                    <input type="submit" class="btn-success btn-large" value="Login" tabindex="3">-->
                                 </form> 
                             </div>
                         </div>
@@ -88,9 +91,10 @@
             </div>
         </div>  
         <jsp:include page="footer.jsp" /> 
-        <script src="../resources/js/libs-b89f04a312.js" type="text/javascript"></script>
-        <script src="../resources/js/memrise-bundle-61a0720e12.js" type="text/javascript"></script>
-        <script src="../resources/js/templates-19b8ca7512.js" type="text/javascript"></script>
-        <script src="../resources/js/main-f2efb8ef12.js" type="text/javascript"></script> 
+        <script src="<c:url value="/resources/js/jquery-3.2.1.slim.min.js" />"></script>
+        <script src="<c:url value="/resources/js/popper.min.js" />"></script>
+        <script src="<c:url value="/resources/js/tether.min.js" />"></script>
+        <script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
+        <script src="<c:url value="/resources/js/skip-vocabulary.js" />"></script>
     </body> 
 </html>
