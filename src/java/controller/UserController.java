@@ -21,7 +21,7 @@ public class UserController {
 @RequestMapping (value = "/login", method = RequestMethod.GET)
 public String login (ModelMap mm)
 {
-    mm.put("abc", "toi là thuan");
+    mm.put("abc", "toi là hung");
     return "login";
 }
 
