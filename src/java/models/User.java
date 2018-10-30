@@ -23,6 +23,7 @@ public class User {
     private String city;
     private String country;
     private String age;
+    private String facebook;
 
     public User(int idUser, String name, String email, String password, String avatar, String phone, String address) {
         this.idUser = idUser;
