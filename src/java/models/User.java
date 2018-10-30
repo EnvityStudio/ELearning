@@ -22,6 +22,8 @@ public class User {
     private String gender;
     private String city;
     private String country;
+    private String age;
+
     public User(int idUser, String name, String email, String password, String avatar, String phone, String address) {
         this.idUser = idUser;
         this.name = name;
