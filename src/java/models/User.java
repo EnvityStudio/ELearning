@@ -19,7 +19,7 @@ public class User {
     private String avatar;
     private String phone;
     private String address;
-
+    private String gender;
     public User(int idUser, String name, String email, String password, String avatar, String phone, String address) {
         this.idUser = idUser;
         this.name = name;
