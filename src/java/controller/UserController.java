@@ -26,6 +26,11 @@ import util.Constant;
 public class UserController {
 
 
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String login(ModelMap mm) {
+        return "logout";
+    }
+
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(ModelMap mm) {
         return "login";
